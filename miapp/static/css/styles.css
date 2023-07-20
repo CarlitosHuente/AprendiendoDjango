@@ -1,0 +1,251 @@
+/*Estilos Generales*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    text-decoration: none;
+
+}
+
+p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+body{
+    background-color: #f2f2f2;
+}
+
+header{
+    width: 1212px;
+    height: 140px;
+    background-color: #232823;
+    margin: 0px auto;   
+}
+
+#logotipo{
+    width: 39%;
+    height: 140px;
+    margin: 0 auto;
+}
+#logotipo h1{
+    display: block;
+    letter-spacing: 2px;
+    /*text-transform: uppercase; /* para mayusculas*/
+    font-weight: lighter;
+    color: #2ba977;
+    text-align: center;
+    float: left;
+    margin-top: 40px;
+    margin-left: 20px;
+    
+
+}
+#logotipo img{
+    display: block;
+    float: left;
+    width: 80px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+/* Estilo Barra de nav*/
+nav{
+    width: 1250px;
+    height: 40px;
+    background-color: #1b1e1f;
+    border: 1px solid #333333;    
+    margin: 0 auto;
+    box-shadow: 0px 22px 22px gray; /* sombra*/
+    font-size: 15px;
+}
+nav ul{
+    list-style: none;
+    text-decoration: none;   
+}
+nav ul li{
+    line-height: 40px;
+    float: left;/* cada uno a lado de otro*/
+}
+nav ul li a{
+    display: block;
+    padding-left: 20px;  /* distancia entre cada elemento*/
+    padding-right: 10px;
+    color: white;
+}
+nav ul li a:hover{
+    background: #2ba977;
+    box-shadow: 0px 0px 5px #333333 inset;
+    transition: all 600ms; /* tiempo que tarda en quedar de un color*/
+}
+.barra{
+    width: 1250px;
+    
+    margin: 0 auto;
+
+}
+.esquina-izquierda{
+    display: block;
+    border-left: 20px solid transparent;
+    border-top: 10px solid #2b2f30;
+    float: left;
+}
+
+.esquina-derecha{
+    display: block;
+    border-right: 20px solid transparent;
+    border-top: 10px solid #2b2f30;
+    float: right;
+}
+.relleno-barra{
+    display: block;
+    width: 1210px;
+    height: 10px;
+    background: #2b2f30;
+    float: left;
+
+}
+/* Estilo Contenidos Central*/
+#content{
+    width: 1210px;
+    min-height: 930px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+.box{
+    background: white;
+    width: 90%;
+    min-height: 930px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.box form{
+    width: 40%;
+}
+
+.box form input,
+.box form label{
+    display: block;
+    padding: 5px;
+    padding-left: 0px;
+}
+.box form input[type="text"],
+.box form textarea,
+.box form select{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.box form select{
+    width: 50%;
+    padding: 5px;
+}
+
+.box input[type="submit"],
+.box input[type="button"],
+.box form button{
+    padding: 10px;
+    margin-top: 5px;
+    background: #2ba977;
+    border: 1px solid white ;
+    color: white;
+}
+
+.box input[type="submit"]:hover,
+.box input[type="button"]:hover,
+.box form button:hover{
+    cursor: pointer;
+    background: #1f7e58;
+}
+
+.title{
+    color: #444;
+    letter-spacing: 1px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.article-item{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 15px;
+    border-bottom: 1px solid#eee;
+    clear: both;
+}
+
+.article-item .image{
+    width: 200px;
+    height: 200px;
+    float: left;
+    overflow: hidden;
+}
+
+.article-item .image img{
+    height: 200px;
+}
+.article-item .data{
+    float: left;
+    padding: 15px;
+    padding-top: 0px;
+}
+
+.article-item h2{
+    display: block;
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.article-item span.date{
+    display: block;
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.btn-eliminar{
+    display: block;
+    margin-top: 5px;
+    padding: 5px;
+    background: rgb(252, 2, 2);
+    color: white;
+    border: 1px solid black;
+    text-align: center;
+    width: 100px;
+}
+
+
+/*Footer*/
+footer{
+    width: 1212px;
+    background-color: #1b1e1f;
+    border: 1px solid #333;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0px 0px 20px gray;
+}
+
+.rojo{
+    color: red;
+    box-shadow: 0px 0px 4px black ;
+}
+.message{
+    padding: 20px;
+    background: #1f7e58;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.clearfix{
+    clear: both;
+    float: none;
+}

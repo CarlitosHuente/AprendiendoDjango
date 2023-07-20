@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block title %} Formulario FULL en Django {% endblock %}
+
+
+{% block content %}
+<h1 class="title"> Formulario FULL en Django </h1>
+
+{% if form.errors %}
+    <strong class="rojo">
+        Hay Errores en el Formulario
+    </strong>
+{%endif%}
+{% csrf_token %}
+<form action="" method="POST"><!-- o podri< ser en la ruta /save-article/   {% url 'save' %}-->
+
+    {% csrf_token %} <!--Solo para POST-->
+
+    {{form}}
+
+    <input type="submit" value="Guardar"/>
+
+</form>
+<p>
+
+</p>
+
+
+{% endblock %}

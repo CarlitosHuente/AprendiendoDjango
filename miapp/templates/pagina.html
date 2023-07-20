@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block title %} Pagina de Prueba {% endblock %}
+
+
+{% block content %}
+<h1 class="title"> Pagina de mi Web </h1>
+<p>{{'Creado por Carlos Carvajal'|cut:" "}}</p> <!-- Con cut elimina lo de despues de : -->
+
+<p>{{texto|default:"No hay Nada en la variable"}}</p>
+
+<p>
+{{lista|join:','}} <!-- 
+    FILTROS TEMPLATES FILTERS (se pueden ocupar mas de uno a la vez)
+JOIN muestra separado por un caracter la lista| 
+LENGHT total de elementos de la lista 
+UPPER todo en mayuscula
+LOWER todo minuscula
+RANDOM un valor de la lista
+STRIPTAGS elimina el formato html y lo presenta como un texto
+WORDCOUNT cuenta las palabras dentro de un texto
+-->
+</p>
+{% load filters %}
+<p>
+{{"Carlos Carvajal"|saludo|safe}}
+</p>
+
+
+{% endblock %}

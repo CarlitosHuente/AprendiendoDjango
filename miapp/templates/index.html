@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block title %} Inicio {% endblock %}
+
+
+{% block content %}
+
+
+{% comment 'Comentario '%}
+    <h1> Todo esto sera un comentario que no aparece en el html</h1>
+{% endcomment %}
+
+    <h1 class="title"> Inicio</h1>
+<p>{{mi_variable}}</p>
+
+<p>{{nombre}}</p>
+
+{% if nombre %}
+    <p>{{nombre}}</p>
+{% else %}
+    <strong> El nombre no existe </strong>
+    
+{% endif %}
+<h3> Tipos de Lenguajes </h3>
+<ul>
+{% for lenguaje in lenguajes%}
+    <li> {{forloop.counter}}. {{lenguaje}}</li>
+{%endfor%}
+
+</ul>
+{% include 'fecha-actual.html'%}
+
+{% endblock %}

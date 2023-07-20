@@ -1,0 +1,80 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {%block title %}
+        <!-- Titulo de Cada Pagina-->
+        {% endblock %}
+        Sitio Web con Django
+    </title>
+    
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+</head>
+
+<body>
+    <!-- Header de la pagina -->
+
+    <header>
+        <div id="logotipo">
+            <!-- Logo django-->
+            <img src="{% static 'css/images/logo.png' %}" />
+            <h1>Detallitos Huente</h1>
+        </div>
+    </header>
+    <nav>
+        
+        <ul>
+            <li>
+                <a href="{% url 'index' %}">Inicio </a>
+            </li>
+            <li>
+                <a href="{% url 'hola_mundo' %}">Hola Mundo </a>
+            </li>
+            <li>
+                <a href="{% url 'create' %}">Crear Articulos </a>
+            </li>
+            <li>
+                <a href="{% url 'create_full' %}">Crear Articulos 2 </a>
+            </li>
+            <li>
+                <a href="{% url 'articulos' %}">Articulos </a>
+            </li>
+            <li>
+                <a href="/pagina-pruebas">Pagina de Prueba</a>
+            </li>
+            <li>
+                <a href="/contacto">Contacto</a>
+            </li>
+          
+        </ul>    
+    </nav>
+<div class="barra">
+    <span class="esquina-izquierda"></span>
+    <span class="relleno-barra"></span>
+    <span class="esquina-derecha"></span>
+</div>
+
+    <div id="content">
+
+        <div class="box">
+            
+            {% block content %}
+            <!--Codigo que viene de templates-->
+            <strong> contenido de Bloque Original</strong>
+            {% endblock %}
+        </div>
+
+    </div>
+
+    <footer>
+        Master en Python &copy; Carlos Carvajal - {% now "Y" %}
+    </footer>
+</body>
+
+</html>
